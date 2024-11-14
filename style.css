@@ -1,4 +1,4 @@
-/* Reset */
+
 * {
     margin: 0;
     padding: 0;
@@ -9,7 +9,7 @@ html, body {
     height: 100%;
 }
 
-/* Make sure body uses Flexbox */
+
 body {
     display: flex;
     justify-content: center;
@@ -21,18 +21,16 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    text-align: center; /* Center text within body */
+    text-align: center; 
 }
 
-/* Header Styling */
+
 header {
     position: fixed;
     width: 100%;
     top: 0;
-    background-color: rgba(255, 255, 255, 0); /* Transparent background */
-    padding: 1rem 2rem;
+    background-color: rgba(255, 255, 255, 0);
     display: flex;
-    justify-content: center;
     z-index: 1000;
 }
 
@@ -40,9 +38,9 @@ header {
     display: flex;
     align-items: center;
     width: 100%;
-    max-width: 1200px;
     justify-content: space-between;
 }
+
 
 .logo {
     color: #333;
@@ -54,17 +52,18 @@ header {
     transition: background-color 0.3s ease;
     cursor: pointer;
 }
+
+
 .logo:hover {
     background-color: #ddd;
 }
-
-/* Center and Style Navigation Links */
-nav {
+.nav-right {
     display: flex;
     gap: 2rem;
+    margin-left: auto;
 }
 
-nav a {
+.nav-right a {
     color: #333;
     font-weight: bold;
     text-decoration: none;
@@ -72,62 +71,75 @@ nav a {
     padding: 0.5rem 1rem;
     border-radius: 5px;
     transition: background-color 0.3s ease;
-}
+}   
 
-nav a:hover {
+.nav-right a:hover {
     background-color: #ddd;
 }
-
-/* Hero Section */
 .hero {
-    margin-top: 6rem; /* Space below the fixed header */
-    margin-bottom: 3rem; /* Additional space below */
+    margin-top: 6rem; 
+    margin-bottom: 3rem;
     padding: 2rem;
     background: rgba(255, 255, 255, 0);
-    display: flex; /* Use Flexbox in hero section */
+    display: flex;
     flex-direction: column;
-    justify-content: center; /* Center vertically */
-    align-items: center; /* Center horizontally */
+    justify-content: center; 
+    align-items: center; 
     text-align: center;
-    height: 50vh; /* Adjust the height as needed */
+    height: 50vh; 
 }
 
-/* Hero Section Heading */
+
 .hero h1 {
     font-family: 'Playfair Display', serif;
     font-size: 2rem;
     color: #333;
     font-weight: bold;
     margin-top: 1rem;
-    margin-bottom: 1rem; /* Add space below the heading */
+    margin-bottom: 1rem; 
 }
 
-/* Shop Button */
+
 .shopbtn {
-    background: linear-gradient(135deg, #6a11cb, #2575fc); /* Gradient background */
+    background: linear-gradient(135deg, #6a11cb, #2575fc); 
     color: white;
     padding: 12px 20px;
     font-size: 16px;
     font-weight: bold;
     border: none;
-    border-radius: 5px; /* Rounded corners */
+    border-radius: 5px; 
     cursor: pointer;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow */
-    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Smooth transition */
-    margin-top: 20px; /* Space from other content */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); 
+    transition: transform 0.2s ease, box-shadow 0.2s ease; 
+    margin-top: 20px; 
 }
 
-/* Button Hover Effect */
+
 .shopbtn:hover {
-    transform: translateY(-3px); /* Slightly move the button up on hover */
-    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3); /* Enhance shadow on hover */
+    transform: translateY(-3px); 
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3); 
 }
 
-/* Footer */
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 1rem;
-    margin-top: auto;
+.product-list, .products {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    padding: 2rem;
 }
+.product {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    text-align: center;
+    max-width: 200px;
+}
+.product-image {
+    width: 100%; 
+    height: auto; 
+    border-radius: 5px; 
+    transition: transform 0.2s ease; 
+}
+
+.product-image:hover {
+    transform: scale(1.05); 
+}
+
